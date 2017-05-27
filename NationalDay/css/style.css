@@ -1,0 +1,290 @@
+*{
+	margin: 0px auto;
+	padding: 0px;
+	list-style-type:none;
+}
+body{
+    font-family: "Microsoft YaHei", "Helvitica Neue", Helvitica, Arial, sans-serif;
+}
+a{
+	text-decoration: none;
+	color: #a23a3b;
+}
+.header{
+	background-image: url(images/title.png);
+	background-size: 100% 500px;
+	background-repeat: no-repeat;
+    height: 500px;
+    width: 100%;
+}
+.wrap{
+	background-image: url(images/bgr.png);
+    height: 3600px;
+	width: 100%;
+}
+.blessing{
+	height: 440px;
+	width: 100%;
+	overflow: hidden;
+}
+.blessing #blessing_icon {
+	float: left;
+	width: 20%;
+}
+#blessing_icon img {
+    margin-top: 75px;
+	margin-left: 70px;
+	width: 185px;
+	height: 185px;
+}
+#lunbo {
+	display: table;
+	width: 80%;
+	height: 250px;
+	line-height: 250px;
+	float: left;
+	margin-top: 150px;
+	text-align: center;
+}
+#lunbo img {
+	display: table-cell;
+	vertical-align: middle;
+    display: inline;
+    width: 25%;
+    height: 170px;
+    z-index: 0;
+}
+#lunbo img.show {
+    width: 35%;
+    height: 80%;
+}
+#lunbo_icon {
+	text-align: center;
+	padding-left: 20%;
+}
+#lunbo_icon > li {
+	display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-left: 5px;
+    border-radius: 100%;
+    background-color: #d59a9a;
+}
+#lunbo_icon > li.on {
+	background-color: #a23a3b;
+}
+.thing_icon{
+	float: left;
+	margin-left: 70px;
+	margin-top: 68px;
+}
+#list {
+	margin-top: 100px;
+}
+.thing {
+	width: 100%;
+	height: 1200px;
+	overflow:hidden; /*清除浮动很关键*/
+}
+.thing_div{
+	float: right;
+	width: 73%;
+	height: 120px;
+    margin-right: 60px;
+    margin-top: 28px;
+}
+.thing_div img{
+	float: left;
+	margin-left: 20px;
+}
+.thing_div p{
+	float: right;
+	margin-left: 190px;
+	margin-top: -80px;
+	line-height: 30px;
+    letter-spacing: 1px;
+	font-size: 15px;
+	color: #333333;
+	font-weight: bolder;
+}
+.thing_div b{
+	color: #a43f3f;
+	font-size: 20px;
+}
+.thing_div2{
+	float: right;
+	width: 73%;
+	height: 120px;
+	margin: 28px 60px 0px 0;
+}
+.thing_div2 #img1{
+	float: left;
+	margin-left: 20px;
+}
+.thing_div2 p{
+	float: left;
+	margin-right: 320px;
+	margin-top: 10px;
+	line-height: 30px;
+    letter-spacing: 1px;
+	font-size: 15px;
+	color: #333333;
+	font-weight: bolder;
+}
+.thing_div2 b{
+	color: #a43f3f;
+	font-size: 20px;
+}
+.thing #pic1{
+	float: right;
+	margin-right: 60px;
+    margin-top: -150px;
+}
+.memory {
+	width: 100%;
+	overflow:hidden; 
+	height: 620px;
+}
+.memory_icon{
+	float: left;
+	margin-left: 70px;
+	margin-top: 120px;
+}
+.memory_div{
+	float: left;
+	height: 420px;
+	margin-left: 35px;
+	margin-top: 210px;
+	text-align: center;
+	font-weight: bolder;
+	letter-spacing: 1px;
+}
+.memory_div p1{
+	display: inline-block;
+	margin-top: 60px;
+	line-height: 30px;
+	font-size: 20px;
+}
+.memory_div p2{
+	display: inline-block;
+	margin-left: 55px;
+	line-height: 30px;
+    font-size: 15px;
+}
+.poetry {
+	width: 100%;
+	overflow:hidden;
+	height: 640px;
+}
+.poetry_icon{
+	float: left;
+	margin-left: 70px;
+	margin-top: 50px;
+}
+.poetry_div{
+	float: right;
+	width: 73%;
+	height: 120px;
+    margin-right: 60px;
+    margin-top: 80px;
+}
+.poetry_div img{
+	float: left;
+	margin-left: 20px;
+}
+.poetry_div p{
+	float: right;
+	margin-left: 190px;
+	margin-top: -115px;
+	line-height: 30px;
+    letter-spacing: 1px;
+	font-size: 15px;
+	color: #333333;
+	font-weight: bolder;
+}
+.portey_div b{
+	color: #a43f3f;
+	font-size: 20px;
+}
+.strong {
+	width: 100%;
+	overflow:hidden;
+	height: 700px;
+}
+.strong_icon{
+	float: left;
+	margin-left: 70px;
+	margin-top: 40px;
+}
+/*.strong_div2 #pic2{
+	float: right;
+	margin-top: 190px;
+}*/
+.strong_div{
+	float: right;
+	width: 73%;
+	height: 120px;
+    margin-right: 60px;
+    margin-top: 125px;
+}
+.strong_div img{
+	float: left;
+}
+.strong_div p1{
+	font-size: 17px;
+	float: right;
+	margin-top: 10px;
+	margin-right: 350px;
+	font-weight: bolder;
+}
+.strong_div p2{
+	float: right;
+	margin-right: 0px;
+	margin-top: 0px;
+	line-height: 30px;
+    letter-spacing: 1px;
+	font-size: 13px;
+	color: #333333;
+	width: 67%;
+	font-weight: bolder;
+}
+.strong_div b{
+	color: #a43f3f;
+	font-size: 28px;
+	float: left;
+    margin-left: 100px;
+}
+.strong_div2{
+	float: right;
+	width: 73%;
+	height: 120px;
+    margin-right: 60px;
+    margin-top: 125px;
+}
+.strong_div2 img{
+	float: right;
+}
+.strong_div2 p1{
+	font-size: 17px;
+	float: left;
+	margin-left: 300px;
+	margin-top: 8px;
+	font-weight: bolder;
+}
+.strong_div2 p2{
+	float: left;
+	margin-left: 0px;
+	margin-top: 0px;
+	line-height: 30px;
+    letter-spacing: 1px;
+	font-size: 13px;
+	color: #333333;
+	width: 70%;
+	font-weight: bolder;
+}
+.strong_div2 b{
+	color: #a43f3f;
+	font-size: 28px;
+	float: right;
+	margin-right: 80px;
+}

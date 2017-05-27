@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<title>微言合工大</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+</head>
+<body>
+	<div class="container" id="wrapper">		
+	</div>
+	<div class="footer">
+		<p>&copy;&nbsp;2016&nbsp;明理苑大学生网络文化工作室</p>
+	</div>
+	<script type="text/javascript">
+		var wrapper = document.getElementById('wrapper');
+		
+		// var data = [];
+		// $.each(data,function(index,val) {
+	 //    	html += "<div class='block'><a href='" + val.href + 
+	 //    	        "'><div class='block-div'><img src='" + val.icon +
+	 //    	        "' class='block-img'></div><p class='block-text'>" + val.text +
+	 //    	        "</p></a></div>";
+	 //    	wrapper.innerHTML = html;
+  //       }
+  //       创建新标签，使用appendChild方法，新增一项。
+
+        $.ajax({
+        	type:'GET',
+        	url:'mock/homepage.json',
+        	contentType:'application/json;charset=utf-8',
+        	dataType:'json',
+        	success:function(data) {
+                var html = '';
+                if (data.success) {
+                	$.each(data.data,function(index,val) {
+			        	html += "<div class='block'><a href='" + val.href + 
+			        	        "'><div class='block-div'><img src='" + val.icon +
+			        	        "' class='block-img'></div><p class='block-text'>" + val.text +
+			        	        "</p></a></div>";
+			        	wrapper.innerHTML = html;
+			        });
+                } else {
+                	wrapper.innerHTML = '<p style="text-align:center;font-size:20px">服务器找不到资源</p>';
+                }
+        	},
+        	error:function(err) {
+        		console.log(err);
+        	}
+        })
+	</script>
+</body>
+</html>

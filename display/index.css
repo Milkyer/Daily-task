@@ -1,0 +1,42 @@
+* {
+	margin: 0px auto;
+	padding: 0px;
+}
+body{
+    font-family: "Microsoft YaHei", "Helvitica Neue", Helvitica, Arial, sans-serif;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+.header {
+	background-color: skyblue;
+	height: 40px;
+	width: 100%;
+}
+.header p {
+	text-align: center;
+	padding-top: 10px;
+	color: white;
+}
+#box {
+    border: 1px solid #999;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin: 5px;
+    padding: 10px;
+    position: relative;
+}
+.name {
+	font-size: 25px;
+	font-weight: bolder;
+}
+.name a:hover {
+	color: orange;
+}
+.word {
+	color: grey;
+}
+.time {
+	font-size: 5px;
+}

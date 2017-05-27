@@ -1,0 +1,199 @@
+* {
+	padding: 0px;
+	margin: 0 auto;
+}
+body {
+	width: 100%;
+	height: 100%;
+	background-color: #b6dcd5;
+	font-family: 'Microsoft YaHei';
+}
+.content {
+	background-color: #ffffff;
+    width: 420px;
+    height: 350px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-left: -210px;
+    border-radius: 5px;
+}
+
+.logo {
+	left: 50%;
+	position: absolute;
+	margin-left: -100px;
+	top: 10%;
+}
+
+.text1 {
+    margin-top: 60px;
+    margin-left: 47px;
+    width: 323px;
+    height: 38px;
+    border: 1px solid #7c7e81;
+    border-radius: 3px;
+    background-color: #898b8e;
+}
+.text1 .userimg {
+    float: left;
+    margin-left: 14px;
+    margin-top: 13px;
+}
+.text1 span {
+	width: 2px;
+    background: #ffffff;
+    height: 22px;
+    display: block;
+    float: left;
+    margin-top: 9px;
+    margin-left: 11px;
+}
+.text1 #usertext1,#usertext2 {
+    float: left;
+    margin-left: 13px;
+    width: 265px;
+    height: 38px;
+    background-color: #898b8e;
+    border: 0;
+    color: #ffffff;
+    font-size: 18px;
+}
+.text2 {
+	margin-top: 30px;
+	margin-left: 47px;
+	width: 323px;
+	height: 38px;
+	border: 1px solid #7c7e81;
+    border-radius: 3px;
+    background-color: #898b8e;
+}
+.text2 .lockimg {
+    float: left;
+    margin-left: 14px;
+    margin-top: 13px;
+}
+.text2 span {
+	width: 2px;
+    background: #ffffff;
+    height: 22px;
+    display: block;
+    float: left;
+    margin-top: 9px;
+    margin-left: 11px;
+}
+.text2 #locktext1,#locktext2,#locktext3 {
+    float: left;
+    margin-left: 13px;
+    width: 265px;
+    height: 38px;
+    background-color: #898b8e;
+    border: 0;
+    color: #ffffff;
+    font-size: 18px;
+}
+#logsubmit {
+	margin-top: 38px;
+	margin-left: 47px;
+	width: 325px;
+	height: 40px;
+	background-color: #b6e5f9;
+	border-radius: 3px;
+	border: 0px;
+	font-size: 21px;
+	font-weight: bold;
+	letter-spacing: 18px;
+	cursor: pointer;
+}
+.footer {
+	margin-top: 37px;
+	height: 20px; 
+	width: 420px;
+	font-size: 16px;
+}
+.fleft {
+	float: left;
+    margin-left: 47px;
+}
+.fleft span {
+	float: left;
+	margin-top: -2px;
+	margin-left: 6px;
+}
+.fleft #checkboxInput {
+	width: 20px;
+	height: 20px;
+	float: left;
+}
+.fleft .checkboxInput {
+	background-color: #798385;
+	width: 14px;
+	height: 14px;
+
+}
+.fright {
+	float: right;
+	margin-right: 47px;
+}
+.fright a {
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+}
+.fright a:hover {
+	color: blue;
+}
+
+
+
+.text3 {
+	margin-top: 38px;
+    margin-left: 47px;
+    width: 323px;
+    height: 38px;
+    border: 1px solid #7c7e81;
+    border-radius: 3px;
+    background-color: #898b8e;
+}
+.text3 .userimg {
+    float: left;
+    margin-left: 14px;
+    margin-top: 13px;
+}
+.text3 span {
+	width: 2px;
+    background: #ffffff;
+    height: 22px;
+    display: block;
+    float: left;
+    margin-top: 9px;
+    margin-left: 11px;
+}
+.text3 #usertext1,#usertext2 {
+    float: left;
+    margin-left: 13px;
+    width: 265px;
+    height: 38px;
+    background-color: #898b8e;
+    border: 0;
+    color: #ffffff;
+    font-size: 18px;
+}
+#registersubmit {
+	margin-top: 30px;
+	margin-left: 47px;
+	width: 325px;
+	height: 40px;
+	background-color: #b6e5f9;
+	border-radius: 3px;
+	border: 0px;
+	font-size: 21px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.footer0 {
+	margin-top: 10px;
+	height: 20px; 
+	width: 420px;
+	font-size: 16px;
+}

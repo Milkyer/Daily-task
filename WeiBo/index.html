@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>微博</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+    <script src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+</head>
+<body>
+    <div class="top">
+        <div class="topl">
+            <img src="images/logo.png">
+            <div class="toptext">
+                <input type="text" placeholder="大家正在搜：大电影" style="width:220px;"><input type="submit" value="搜索" style="width:35px;">
+            </div>           
+        </div>
+
+        <div class="topr">
+            <tr>
+            <a href="#"><th>首页</th></a>
+            <a href="#"><th>视频</th></a>
+            <a href="#"><th>发现</th></a>
+            <a href="#"><th>游戏</th></a>
+            <a href="#"><th>我是大熊Milky</th></a>
+            </tr>
+        </div>
+    </div>
+
+    <div class="wrap">
+        <div class="content">
+            <div class="conleft">
+                <ul>
+                    <li class="col"><a href="#">首页</a></li>
+                    <li class="col"><a href="#">我的收藏</a></li>
+                    <li class="col"><a href="#">我的赞</a></li> <br>
+                    <li class="col"><a href="#">热门微博</a></li> 
+                    <li class="col"><a href="#">热门视频</a></li> <br>
+                    <li class="col"><a href="#">好友圈</a></li>
+                    <li class="col"><a href="#">特别关注</a></li>
+                    <li class="col"><a href="#">高校</a></li>
+                    <li class="col"><a href="#">本地生活</a></li> 
+                    <li class="col"><a href="#">小清新</a></li>
+                    <li class="col"><a href="#">....</a></li>
+                </ul>
+            </div>
+
+            <div class="conright">
+                <h3>账号登录</h3>
+                <input type="text" placeholder="账号/手机号" style="width:160px;">
+                <input type="text" placeholder="请输入密码" style="width:160px;">
+                <input type="submit" value="登录" style="width:165px;height:25px;background-color:orange;border-radius:8px;">
+            </div>
+
+        <div class="conmiddle">
+            <div class="box1">
+	            <h>有什么新鲜事想告诉大家？</h> <br>
+	            <textarea rows="5" cols="60" id="txt" value="">  </textarea> <br>
+	            <div class="sub">
+	                <tr class="subl">
+	                    <th>表情</th>    
+	                    <th>图片</th>    
+	                    <th>视频</th>    
+	                    <th>话题</th>    
+	                    <th>头条文章</th>   
+	                </tr>
+                    <div class="subr">
+                        <select>
+                            <option>公开</option>
+                            <option>好友圈</option>
+                            <option>仅自己可见</option>
+                            <option>群可见</option>
+                        </select>
+                        <input type="submit" value="发布" class="public" id="btn"></input>
+                    </div>
+                </div>
+            </div>
+            <div class="box1">
+                <div class="nav">
+                    <tr class="navl">
+                        <a href="#"><th>全部</th></a>
+                        <a href="#"><th>原创</th></a>
+                        <a href="#"><th>图片</th></a>
+                        <a href="#"><th>视频</th></a>
+                        <a href="#"><th>音乐</th></a>
+                        <a href="#"><th>文章</th></a>
+                    </tr>
+                    <div class="navr">
+                        <input type="text" placeholder="搜索我关注人的微博" style="width:150px;font-size:5px;"><input type="submit" value="搜索" style="width:35px;background-color:white;height:23px;font-size:5px;">
+                    </div>
+                </div>
+            </div> 
+
+            <div id="box">
+            </div>
+        </div>
+    </div>
+
+   <!-- 两个重要的点：ajax发送请求，自动页面产生微博内容（演示微博界面的发送过程 network preview）
+                创建新标签，使用appendChild方法，新增一项的过程。
+ -->
+    <script type="text/javascript">
+        var box = document.getElementById('box'); 
+        var data = [
+        {
+            "icon": "images/user.jpg",
+            "name": "大熊Milky",
+            "time": "1分钟前",
+            "text": "I strove with none,For none was worth my strife.Nature I loved and,Next to Nature, Art;I warm'd both hands before the fire of life;It sinks,And I am ready to depart.",
+            "image": "images/pic2.jpg",
+            "num1": "40",
+            "num2": "60",
+            "num3": "100"
+        },{
+            "icon": "images/user.jpg",
+            "name": "大熊Milky",
+            "time": "3分钟前",
+            "text": "有时侯，觉得自己其实一无所有，仿佛被世界抛弃；有时候，明明自己身边很多朋友，却依然觉得孤单；有时候，突然找不到自己，把自己丢了。",
+            "image": "images/pic1.jpg",
+            "num1": "20",
+            "num2": "30",
+            "num3": "50"
+        },{
+            "icon": "images/user.jpg",
+            "name": "大熊Milky",
+            "time": "5分钟前",
+            "text": "I strove with none,For none was worth my strife.Nature I loved and,Next to Nature, Art;I warm'd both hands before the fire of life;It sinks,And I am ready to depart.",
+            "image": "images/pic2.jpg",
+            "num1": "40",
+            "num2": "60",
+            "num3": "100"
+        }
+	];
+	var html = '';
+    $.each(data,function(index,val) {
+    	html += "<div class='avatar'><img src='"+ val.icon + "'></div><div class='word'> <h class='h'>"+ val.name +"</h>  <br>    <span class='span'>"+ val.time +" 来自 微博 weibo.com</span>  <br>     <p>"+ val.text +"</p>   <img src='"+ val.image +"' class='photo'>   <div class='comment'>  <p class='list'>收藏</p>     <p class='list'>转发 <label id='temp1'>"+ val.num1 +"</label>  </p>  <p class='list'>评论 <label id='temp2'>"+ val.num2 +"</label> </p>     <p class='list'>点赞 <label id='temp3'>"+ val.num3 +"</label> </p> </div>";
+        box.innerHTML = html;
+    });
+       //  $.ajax({
+       //  	type:'GET',
+       //  	url:'index.json',
+       //  	contentType:'application/json;charset=utf-8',
+       //  	dataType:'json',
+       //  	function(data) {
+       //          var html = '';
+       //          $.each(data,function(index,val) {
+			    // 	html += "<div class='avatar'><img src='"+ val.icon + "'></div><div class='word'> <h class='h'>"+ val.name +"</h>  <br>    <span class='span'>"+ val.time +" 来自 微博 weibo.com</span>  <br>     <p>"+ val.text +"</p>   <img src='"+ val.image +"' class='photo'>   <div class='comment'>  <p class='list'>收藏</p>     <p class='list'>转发 <label id='temp1'>"+ val.num1 +"</label>  </p>  <p class='list'>评论 <label id='temp2'>"+ val.num2 +"</label> </p>     <p class='list'>点赞 <label id='temp3'>"+ val.num3 +"</label> </p> </div>";
+       //              box.innerHTML = html;
+			    // });
+       //  	},
+       //  })
+
+        var txt = document.getElementById('txt');
+        var btn = document.getElementById('btn');
+        btn.onclick = function() {
+        	var bottle = document.createElement('div');
+        	
+        	var avatar = document.createElement('div');
+        	avatar.className = "avatar";
+        	avatar.innerHTML = "<img src='images/user.jpg'>";
+        	var word = document.createElement('div');
+        	word.className = "word";
+        	var h = document.createElement('h');
+        	h.className = "h";
+        	h.innerHTML = "大熊Milky";
+        	var span = document.createElement('span');
+        	span.className = "span";
+        	span.innerHTML = "<br>1分钟前 来自 微博 weibo.com";
+        	var p = document.createElement('p');
+        	p.innerHTML = txt.value;
+        	var photo = document.createElement('img');
+        	photo.className = "photo";
+        	photo.src = "images/pic2.jpg";
+            word.appendChild(h);
+            word.appendChild(span);
+            word.appendChild(p);
+            word.appendChild(photo);
+            var comment = document.createElement('div');
+            comment.className = "comment";
+            var com1 = document.createElement('com1');
+            com1.className = "com1";
+            var collect = document.createElement('p');
+            collect.className = "list";
+            collect.innerHTML = "收藏";
+            var list1 = document.createElement('p');
+            list1.className = "list";
+            list1.innerHTML = "转发";
+            var list2 = document.createElement('p');
+            list2.className = "list";
+            list2.innerHTML = "评论";
+            var list3 = document.createElement('p');
+            list3.className = "list";
+            list3.innerHTML = "点赞";
+            comment.appendChild(com1);
+            com1.appendChild(collect);
+            com1.appendChild(list1);
+            com1.appendChild(list2);
+            com1.appendChild(list3);
+            bottle.appendChild(avatar);
+        	bottle.appendChild(word);
+        	bottle.appendChild(comment);
+            if(box.children.length>0){
+                box.insertBefore(bottle,box.children[0]);
+            }else {
+                box.appendChild(bottle);
+            }
+            
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>勤工助学岗位介绍</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <p>勤工助学岗位</p>
+    </div>
+    <hr />
+    <div id="box">
+
+    </div>
+    <script type="text/javascript">
+        var box = document.getElementById("box"); 
+        var data = [
+        {
+            "name": "网络中心人员",
+            "word": "在大学生网络工作室，这个工作不属于勤工助学但是也是一份工作，可以拿到工资干活不是很多。需要到网络中心去应聘，有一定的网络技术，就是接网线开通网络等工作。",
+            "time": "2017/05/15 09:30"
+        },{
+            "name": "图书整理人员",
+            "word": "在图书馆，这个岗位的工作相对比较舒适，每个学期都会招一部分同学进去工作整理书籍。如果你想要到图书馆工作需要有绿卡，然后主动到图书馆去找管理员申请，不要等着别人来找你，机会是自己把握的。",
+            "time": "2017/04/20 11:40"
+        }
+	];
+	var html = '';
+    $.each(data,function(index,val) {
+    	html += "<div class='name'><a href='#'>"+ val.name +"</a></div> <div class='word'> <p>"+ val.word +"</p> </div> <div class='time'> 发布时间：<span>"+ val.time +"</span> </div> <br />";
+        box.innerHTML = html;
+    });
+    </script>
+</body>
+</html>
