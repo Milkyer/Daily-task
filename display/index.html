@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>勤工助学岗位介绍</title>
 	<link rel="stylesheet" type="text/css" href="index.css">
-	<script src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://zeptojs.com/zepto.min.js"></script>
 </head>
 <body>
     <div class="header">
         <p>勤工助学岗位</p>
     </div>
     <hr />
-    <div id="box">
+    <div id="content">
 
     </div>
+
     <script type="text/javascript">
-        var box = document.getElementById("box"); 
+        var content = document.getElementById("content"); 
         var data = [
         {
             "name": "网络中心人员",
@@ -30,8 +31,8 @@
 	];
 	var html = '';
     $.each(data,function(index,val) {
-    	html += "<div class='name'><a href='#'>"+ val.name +"</a></div> <div class='word'> <p>"+ val.word +"</p> </div> <div class='time'> 发布时间：<span>"+ val.time +"</span> </div> <br />";
-        box.innerHTML = html;
+    	html += "<div class='box'><div class='name'><a href='#'>"+ val.name +"</a></div> <div class='word'> <p>"+ val.word +"</p> </div> <div class='time'> 发布时间：<span>"+ val.time +"</span> </div> </div>";
+        content.innerHTML = html;
     });
     </script>
 </body>

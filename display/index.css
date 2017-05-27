@@ -19,8 +19,8 @@ a {
 	padding-top: 10px;
 	color: white;
 }
-#box {
-    border: 1px solid #999;
+.box {
+	border: 1px solid #999;
     border-radius: 10px;
     box-sizing: border-box;
     margin: 5px;
@@ -28,15 +28,16 @@ a {
     position: relative;
 }
 .name {
-	font-size: 25px;
+	font-size: 1.5em;
 	font-weight: bolder;
 }
 .name a:hover {
 	color: orange;
 }
 .word {
+	font-size: 1em;
 	color: grey;
 }
 .time {
-	font-size: 5px;
+	font-size: 0.9em;
 }
