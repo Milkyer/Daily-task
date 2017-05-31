@@ -10,26 +10,26 @@ a {
 	color: black;
 }
 .header {
-	background-color: skyblue;
-	height: 40px;
+	background-color: steelblue;
+	height: 50px;
 	width: 100%;
 }
 .header p {
 	text-align: center;
-	padding-top: 10px;
+	padding-top: 15px;
 	color: white;
+	font-weight: bolder;
+	font-size: 1.2em;
 }
 .box {
-	border: 1px solid #999;
-    border-radius: 10px;
+	border-bottom: 2px solid #DCDCDC;
     box-sizing: border-box;
-    margin: 5px;
-    padding: 10px;
+    margin: 8px 28px;
+    padding: 16px 0;
     position: relative;
 }
 .name {
-	font-size: 1.5em;
-	font-weight: bolder;
+	font-size: 1.1em;
 }
 .name a:hover {
 	color: orange;
@@ -37,7 +37,20 @@ a {
 .word {
 	font-size: 1em;
 	color: grey;
+	height: 25px;
+}
+.location {
+	float: left;
+}
+.sex {
+	float: right;
 }
 .time {
 	font-size: 0.9em;
+	color: grey;
+}
+.footer {
+    font-size: 0.8em;
+    margin-bottom: 20px;
+    margin-top: 60px;
 }
